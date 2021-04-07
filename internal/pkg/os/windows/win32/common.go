@@ -1,9 +1,5 @@
 package win32
 
-import (
-	"syscall"
-)
-
 type (
 	BOOL  bool
 	INT   int32
@@ -14,6 +10,7 @@ type (
 	ATOM  uint16
 	DWORD uint32
 
+	PVOID   uintptr
 	LPVOID  uintptr
 	LPCSTR  *uint8
 	LPCWSTR *uint16
@@ -23,13 +20,14 @@ type (
 	LPARAM  uintptr
 	LRESULT uintptr
 
-	HBRUSH    syscall.Handle
-	HCURSOR   syscall.Handle
-	HICON     syscall.Handle
-	HINSTANCE syscall.Handle
-	HMENU     syscall.Handle
-	HMODULE   syscall.Handle
-	HWND      syscall.Handle
+	HANDLE    PVOID
+	HBRUSH    HANDLE
+	HCURSOR   HANDLE
+	HICON     HANDLE
+	HINSTANCE HANDLE
+	HMENU     HANDLE
+	HMODULE   HANDLE
+	HWND      HANDLE
 )
 
 const (
