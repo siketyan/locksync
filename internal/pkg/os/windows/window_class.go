@@ -37,10 +37,10 @@ func CreateWindowClass(name string, onMessage func(message Message)) WindowClass
 }
 
 func WindowClassFromWin32(wcx win32.WNDCLASSEXW) (class WindowClass) {
-	class.Name = WStrToString(wcx.LpszClassName)
-	class.WindowProc = WindowProc(unsafe.Pointer(wcx.LpfnWndProc))
-
-	return
+	return WindowClass{
+		Name:       WStrToString(wcx.LpszClassName),
+		WindowProc: WindowProc(unsafe.Pointer(wcx.LpfnWndProc)),
+	}
 }
 
 func (class WindowClass) ToWin32(instance Instance) (wcx win32.WNDCLASSEXW) {
