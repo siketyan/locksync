@@ -12,14 +12,12 @@ type (
 )
 
 const (
-	// MessageType
-	MsgTypeUnknown = iota
+	MsgTypeUnknown MessageType = iota
 	MsgTypeWtsSessionChange
 )
 
 const (
-	// WtsSessionChangeReason
-	WtsReasonUnknown = iota
+	WtsReasonUnknown WtsSessionChangeReason = iota
 	WtsReasonSessionLock
 	WtsReasonSessionUnlock
 )
