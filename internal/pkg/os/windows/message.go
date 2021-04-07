@@ -13,13 +13,15 @@ type (
 
 const (
 	// MessageType
-	MsgTypeUnknown          = 0
-	MsgTypeWtsSessionChange = 1
+	MsgTypeUnknown = iota
+	MsgTypeWtsSessionChange
+)
 
+const (
 	// WtsSessionChangeReason
-	WtsReasonUnknown       = 0
-	WtsReasonSessionLock   = 1
-	WtsReasonSessionUnlock = 2
+	WtsReasonUnknown = iota
+	WtsReasonSessionLock
+	WtsReasonSessionUnlock
 )
 
 func (message *Message) GetType() MessageType {
