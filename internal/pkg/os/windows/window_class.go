@@ -4,7 +4,7 @@ import (
 	"syscall"
 	"unsafe"
 
-	"locksync/internal/pkg/os/windows/win32"
+	"github.com/siketyan/locksync/internal/pkg/os/windows/win32"
 )
 
 type (

@@ -1,6 +1,8 @@
 package windows
 
-import "locksync/internal/pkg/os/windows/win32"
+import (
+	"github.com/siketyan/locksync/internal/pkg/os/windows/win32"
+)
 
 type (
 	Message                 win32.MSG

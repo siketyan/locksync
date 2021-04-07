@@ -1,7 +1,7 @@
 package windows
 
 import (
-	"locksync/internal/pkg/os/windows/win32"
+	"github.com/siketyan/locksync/internal/pkg/os/windows/win32"
 )
 
 func LockWorkStation() (err *Win32Error) {
