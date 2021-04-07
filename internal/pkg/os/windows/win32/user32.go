@@ -40,6 +40,7 @@ type (
 	LPMSG         *MSG
 )
 
+// noinspection GoSnakeCaseUsage
 const (
 	COLOR_WINDOW = 5
 
